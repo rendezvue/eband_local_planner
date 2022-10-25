@@ -2,6 +2,11 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(eband_local_planner)
 
+set(CMAKE_PREFIX_PATH "/opt/ros/melodic")
+set(qt_build_DIR "/opt/ros/melodic/share/qt_build/cmake")
+set(base_local_planner_DIR "/opt/ros/melodic/share/base_local_planner/cmake")
+set(control_toolbox_DIR "/opt/ros/melodic/share/control_toolbox/cmake")
+
 find_package(catkin REQUIRED
   COMPONENTS
     base_local_planner

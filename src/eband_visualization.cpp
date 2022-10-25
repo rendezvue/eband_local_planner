@@ -229,9 +229,9 @@ namespace eband_local_planner{
     PoseToPose2D(bubble.center.pose, tmp_pose2d);
     marker.pose.position.z = 0;//tmp_pose2d.theta * getCircumscribedRadius(*costmap_ros_);
     // scale ~ diameter --> is 2x expansion ~ radius
-    marker.scale.x = 2.0*bubble.expansion;
-    marker.scale.y = 2.0*bubble.expansion;
-    marker.scale.z = 2.0*bubble.expansion;
+    marker.scale.x = 1.0*bubble.expansion;
+    marker.scale.y = 1.0*bubble.expansion;
+    marker.scale.z = 1.0*bubble.expansion;
 
     // color (rgb)
     marker.color.r = 0.0f;
@@ -244,7 +244,7 @@ namespace eband_local_planner{
       case blue:	{ marker.color.b = 1.0f; break; }
     }
     // transparency (alpha value < 1 : displays marker transparent)
-    marker.color.a = 0.75;
+    marker.color.a = 0.3;
 
     // lifetime of this marker
     marker.lifetime = ros::Duration(marker_lifetime_);
